@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Car companies</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="./assets/images/corvette_flags.jpg">
+</head>
+    <body>
+        <!--The header is styled by the h1 tag from the CSS file. Not sure if the 
+            div also needs to have a class or an ID-->
+        <div>
+            <h1>Guess the car company!</h1>
+        </div>
+        <!-- The background image is contained in the CSS file. It appears multiple times
+        instead of just once. *****Need to make changes to this but dont know how*****.  -->
+        <div class="background">
+            <div class="container">
+
+                <!--This is the heading across the inside of the word text.-->
+                <h2>Press any key to guess this car company.</h2>
+                <div>
+                    <img id="image" src="./assets/images/Checkered flag.jpg" width="200" height="200">
+                </div>
+
+                <!--Car company that needs to be guessed.-->
+                <div>
+                    <h3 id="currentword">_ _ _ _ _</h3>
+                </div>
+                    <!-- This entire section will be across the bottom to house the guesses,
+                    Wins, Losses, and letters guessed wrong. These are individual divs within
+                    a large div. -->
+                    <div id="scoreboard">
+                        <!--Guesses left. Note that for all of these things the h3 tag is inside
+                        a div and the span is inside an h3 tag. The span is only there to house
+                        some information in it. The span id doesn't do the styling, it only spits
+                        out the information. The span has the styling.-->
+                        <div class="sidebar">
+                            <h3>Chances left:
+                                <span id="guessesremaining"></span>
+                            </h3>
+                        </div>
+
+                        <!--Wins counter-->
+                        <div class="sidebar">
+                            <h3>Current Wins:
+                                <span id="winstracker"></span>
+                            </h3>
+                        </div>
+                        <!--Loss counter-->
+                        <div class="sidebar">
+                            <h3>Current losses:
+                                <span id="losstracker"></span>
+                            </h3>
+                        </div>
+
+                        <!--Wrong guesses-->
+                        <div class="sidebar">
+                            <h3>Incorrect guesses:
+                                <span id="playerguesses"></span>
+                            </h3>
+                        </div>
+                    </div>
+             </div>
+        </div>
+
+
+
+        <!--AUDIO FILES-->
+        <div>
+            <!--little red corvette audio-->
+            <audio id="lrcaudio">
+                <source src="./assets/audio/lrcaudio.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <script src="assets/javascript/game2.js"></script>
+
+    </body>
+
